@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preparing Video...</title>
     
-    <!-- كود إعلانات Popunder الحالي -->
+    <!-- كود الإعلان المنبثق Popunder -->
     <script type='text/javascript' src='//pl25881432.genefinedcpm.com/de/3f/79/de3f790278bdc38ee2cfdf19ffbb1c7a.js'></script>
     
     <style>
@@ -30,17 +30,8 @@
             text-align: center; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
-        h2 {
-            font-size: 1.25rem;
-            margin-top: 0;
-            color: #f3f4f6;
-        }
-        .timer { 
-            font-size: 2.5rem; 
-            font-weight: 800; 
-            color: #3b82f6; 
-            margin: 10px 0; 
-        }
+        h2 { font-size: 1.25rem; margin-top: 0; color: #f3f4f6; }
+        .timer { font-size: 2.5rem; font-weight: 800; color: #3b82f6; margin: 10px 0; }
         .btn { 
             display: inline-block; 
             padding: 14px 28px; 
@@ -50,20 +41,15 @@
             border-radius: 8px; 
             font-weight: 700; 
             font-size: 1.1rem; 
-            transition: background-color 0.2s ease;
         }
-        .btn:hover { 
-            background-color: #16a34a; 
-        }
+        .btn:hover { background-color: #16a34a; }
         
-        /* إطار البنر الإعلاني 300x250 */
         .ad-container { 
             margin: 15px auto; 
             width: 300px; 
-            height: 250px; 
+            min-height: 250px; 
             background: #1f2937; 
             border-radius: 8px; 
-            overflow: hidden; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,22 +62,21 @@
         
         <!-- البنر الإعلاني (300x250) -->
         <div class="ad-container">
-            <script>
-              atOptions = {
-                'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
-                'format' : 'iframe',
-                'height' : 250,
-                'width' : 300,
-                'params' : {}
-              };
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
             </script>
-            <script src="https://www.highperformanceformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
         </div>
 
         <div class="timer" id="countdown">5</div>
         <p id="waitText" style="color: #9ca3af; margin-bottom: 0;">Please wait a few seconds...</p>
         
-        <!-- زر التوجيه للفيديو -->
         <a id="videoBtn" href="https://slicedrive.com/upload?v=SOz6qSZn1" target="_blank" class="btn" style="display: none;">Watch Video Now 🎬</a>
     </div>
 
