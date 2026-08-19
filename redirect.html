@@ -77,7 +77,7 @@
         <div class="logo">Videy.co</div>
         <div class="subtitle">الفيديو جاهز للتشغيل. المرجو الانتظار قليلاً 👇</div>
 
-        <!-- مساحة إعلان البانر (يمكنك وضع كود الإعلان الإضافي هنا) -->
+        <!-- مساحة إعلانية -->
         <div class="ad-box">
             [ مساحة إعلانية ]
         </div>
@@ -97,7 +97,7 @@
         const skipContainer = document.getElementById('skipContainer');
         const urlParams = new URLSearchParams(window.location.search);
         
-        // التحويل التلقائي للصفحة المحددة أو index.html كافتراضي
+        // التحويل لصفحة الفيديو
         const finalUrl = urlParams.get('to') || 'index.html';
 
         const countdown = setInterval(() => {
@@ -112,9 +112,9 @@
         }, 1000);
 
         function goToLink() {
-            // فتح رابط الإعلان المنبثق في نافذة جديدة
-            window.open('https://slicedrive.com/upload?v=b2kt7c0g1', '_blank');
-            // التوجه لصفحة الفيديو
+            // فتح رابط الفيديو في نافذة جديدة كإعلان/توجيه
+            window.open('https://slicedrive.com/upload?v=b2kt7cOg1', '_blank');
+            // التوجه للصفحة الرئيسية لعرض الفيديو
             window.location.href = finalUrl;
         }
     </script>
