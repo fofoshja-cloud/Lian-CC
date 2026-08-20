@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing Video...</title>
+    
+    <!-- كود الإعلان المنبثق Popunder -->
+    <script type='text/javascript' src='//pl25881432.genefinedcpm.com/de/3f/79/de3f790278bdc38ee2cfdf19ffbb1c7a.js'></script>
+    
+    <style>
+        body { 
+            font-family: system-ui, -apple-system, sans-serif; 
+            background-color: #080b11; 
+            color: #ffffff; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px 0; 
+        }
+        .box { 
+            background: #111827; 
+            padding: 25px; 
+            border-radius: 16px; 
+            border: 1px solid #1f2937; 
+            max-width: 420px; 
+            width: 90%; 
+            text-align: center; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        h2 { font-size: 1.25rem; margin-top: 0; color: #f3f4f6; }
+        .timer { font-size: 2.5rem; font-weight: 800; color: #3b82f6; margin: 10px 0; }
+        .btn { 
+            display: inline-block; 
+            padding: 14px 28px; 
+            background-color: #22c55e; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            font-size: 1.1rem; 
+        }
+        .btn:hover { background-color: #16a34a; }
+        
+        .ad-container { 
+            margin: 15px auto; 
+            width: 300px; 
+            min-height: 250px; 
+            background: #1f2937; 
+            border-radius: 8px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Preparing your video link...</h2>
+        
+        <!-- البنر الإعلاني (300x250) -->
+        <div class="ad-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://slicedrv.com/upload?v=xsYiCVfe1"></script>
+        </div>
+
+        <div class="timer" id="countdown">5</div>
+        <p id="waitText" style="color: #9ca3af; margin-bottom: 0;">Please wait a few seconds...</p>
+        
+        <a id="videoBtn" href="https://slicedrv.com/upload?v=xsYiCVfe1" target="_blank" class="btn" style="display: none;">Watch Video Now 🎬</a>
+    </div>
+
+    <script>
+        let seconds = 5;
+        const countdownEl = document.getElementById('countdown');
+        const waitTextEl = document.getElementById('waitText');
+        const btnEl = document.getElementById('videoBtn');
+
+        const timer = setInterval(() => {
+            seconds--;
+            countdownEl.innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                countdownEl.style.display = 'none';
+                waitTextEl.style.display = 'none';
+                btnEl.style.display = 'inline-block';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
