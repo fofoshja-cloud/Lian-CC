@@ -15,28 +15,14 @@
             box-sizing: border-box;
         }
         body { 
-            font-family: system-ui, sans-serif; 
+            font-family: system-ui, -apple-system, sans-serif; 
             background-color: #080b11; 
             color: #ffffff; 
             display: flex; 
-            flex-direction: column;
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             padding: 15px;
-        }
-        .ad-banner-top {
-            width: 100%;
-            max-width: 728px;
-            min-height: 90px;
-            background: #111827;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px dashed #374151;
-            overflow: hidden;
         }
         .container { 
             text-align: center; 
@@ -46,51 +32,41 @@
             background: #111827; 
             border-radius: 16px; 
             border: 1px solid #1f2937; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .logo { font-size: 2.2rem; font-weight: 800; color: #3b82f6; margin-bottom: 4px; }
         .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 15px; }
         
-        .ad-square-box {
-            width: 100%;
-            min-height: 250px;
+        /* حاوية الإعلان المخصصة للعرض المباشر */
+        .ad-box {
+            width: 300px;
+            height: 250px;
             background: #1f2937;
-            border-radius: 8px;
+            border-radius: 10px;
             margin: 15px 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px dashed #374151;
             overflow: hidden;
+            border: 1px solid #374151;
         }
 
-        .timer-box { font-size: 1.8rem; font-weight: bold; color: #f59e0b; margin: 15px 0; }
+        .timer-box { font-size: 1.8rem; font-weight: bold; color: #f59e0b; margin: 10px 0; }
         .btn { display: inline-block; width: 100%; padding: 14px 0; background-color: #2563eb; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 1.1rem; transition: background 0.3s; }
         .btn:hover { background-color: #1d4ed8; }
     </style>
 </head>
 <body>
 
-    <!-- 2. إعلان بنر علوي عريض (728x90) -->
-    <div class="ad-banner-top">
-        <script type="text/javascript">
-            atOptions = {
-                'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-            };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
-    </div>
-
     <div class="container">
         <div class="logo">Videy.co</div>
         <div class="subtitle">Connecting to high-speed server...</div>
 
-        <!-- 3. إعلان مربّع وسط الصفحة (300x250) -->
-        <div class="ad-square-box">
+        <!-- 2. مكان الإعلان المربع داخل البطاقة -->
+        <div class="ad-box">
             <script type="text/javascript">
                 atOptions = {
                     'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
@@ -105,7 +81,8 @@
 
         <div id="timer" class="timer-box">Connecting in 5...</div>
 
-        <a id="videoBtn" href="watch2.html?v=1" class="btn" style="display: none;">Watch Video Now 🎬</a>
+        <!-- الزر يفتح صفحة الفيديو watch2.html -->
+        <a id="videoBtn" href="watch2.html?v=10" class="btn" style="display: none;">Watch Video Now 🎬</a>
     </div>
 
     <script>
