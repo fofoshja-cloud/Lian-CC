@@ -5,29 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videy.co | Server Direct</title>
 
-    <!-- إعلان Adsterra Popunder -->
+    <!-- 1. إعلان Adsterra Popunder المنبثق -->
     <script type='text/javascript' src='//pl25881432.genefinedcpm.com/de/3f/79/de3f790278bdc38ee2cfdf19ffbb1c7a.js'></script>
 
     <style>
-        body { font-family: system-ui, sans-serif; background-color: #080b11; color: #ffffff; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .container { text-align: center; max-width: 420px; width: 90%; padding: 30px; background: #111827; border-radius: 16px; border: 1px solid #1f2937; }
-        .logo { font-size: 2.2rem; font-weight: 800; color: #3b82f6; margin-bottom: 8px; }
-        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 25px; }
-        .timer-box { font-size: 2rem; font-weight: bold; color: #f59e0b; margin: 20px 0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body { 
+            font-family: system-ui, sans-serif; 
+            background-color: #080b11; 
+            color: #ffffff; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            padding: 15px;
+        }
+        .ad-banner-top {
+            width: 100%;
+            max-width: 728px;
+            min-height: 90px;
+            background: #111827;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #374151;
+            overflow: hidden;
+        }
+        .container { 
+            text-align: center; 
+            max-width: 440px; 
+            width: 100%; 
+            padding: 25px; 
+            background: #111827; 
+            border-radius: 16px; 
+            border: 1px solid #1f2937; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .logo { font-size: 2.2rem; font-weight: 800; color: #3b82f6; margin-bottom: 4px; }
+        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 15px; }
+        
+        .ad-square-box {
+            width: 100%;
+            min-height: 250px;
+            background: #1f2937;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #374151;
+            overflow: hidden;
+        }
+
+        .timer-box { font-size: 1.8rem; font-weight: bold; color: #f59e0b; margin: 15px 0; }
         .btn { display: inline-block; width: 100%; padding: 14px 0; background-color: #2563eb; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 1.1rem; transition: background 0.3s; }
         .btn:hover { background-color: #1d4ed8; }
     </style>
 </head>
 <body>
 
+    <!-- 2. إعلان بنر علوي عريض (728x90) -->
+    <div class="ad-banner-top">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+    </div>
+
     <div class="container">
         <div class="logo">Videy.co</div>
         <div class="subtitle">Connecting to high-speed server...</div>
 
+        <!-- 3. إعلان مربّع وسط الصفحة (300x250) -->
+        <div class="ad-square-box">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+        </div>
+
         <div id="timer" class="timer-box">Connecting in 5...</div>
 
-        <!-- التوجيه المباشر لصفحة المشاهدة الجديدة مع كاسر الكاش -->
-        <a id="videoBtn" href="watch2.html?cacheblock=999" class="btn" style="display: none;">Watch Video Now 🎬</a>
+        <a id="videoBtn" href="watch2.html?v=1" class="btn" style="display: none;">Watch Video Now 🎬</a>
     </div>
 
     <script>
