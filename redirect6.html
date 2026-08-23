@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- كود التحقق الخاص بـ Monetag -->
+    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+
+    <title>Redirecting to Video...</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background-color: #080b11; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; text-align: center; }
+        .loader-box { background: #111827; padding: 30px; border-radius: 16px; border: 1px solid #1f2937; max-width: 350px; width: 90%; }
+        .spinner { border: 4px solid #1f2937; border-top: 4px solid #3b82f6; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        p { color: #94a3b8; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <div class="loader-box">
+        <div class="spinner"></div>
+        <h2>Connecting to Server...</h2>
+        <p>Please wait, redirecting to your video player.</p>
+    </div>
+
+    <script>
+        // التوجيه تلقائياً إلى index6.html بعد ثانيتين
+        setTimeout(function() {
+            window.location.href = "index6.html";
+        }, 2000);
+    </script>
+
+</body>
+</html>
