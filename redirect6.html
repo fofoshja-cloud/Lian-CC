@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- كود التحقق الخاص بـ Monetag -->
     <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+    <title>Videy.co | Server Direct</title>
 
-    <title>Redirecting to Video...</title>
     <style>
-        body { font-family: system-ui, sans-serif; background-color: #080b11; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; text-align: center; }
-        .loader-box { background: #111827; padding: 30px; border-radius: 16px; border: 1px solid #1f2937; max-width: 350px; width: 90%; }
-        .spinner { border: 4px solid #1f2937; border-top: 4px solid #3b82f6; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        p { color: #94a3b8; font-size: 0.95rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background-color: #080b11; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+        .container { text-align: center; max-width: 440px; width: 100%; padding: 25px; background: #111827; border-radius: 16px; border: 1px solid #1f2937; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: flex; flex-direction: column; align-items: center; }
+        .logo { font-size: 2.2rem; font-weight: 800; color: #3b82f6; margin-bottom: 4px; }
+        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 15px; }
+        .ad-box { width: 100%; max-width: 300px; height: 250px; background: #1f2937; border-radius: 10px; margin: 15px 0; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #374151; text-decoration: none; color: #60a5fa; font-weight: bold; }
+        .timer-box { font-size: 1.8rem; font-weight: bold; color: #f59e0b; margin: 10px 0; }
+        .btn { display: inline-block; width: 100%; padding: 14px 0; background-color: #2563eb; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 1.1rem; transition: background 0.3s; }
+        .btn:hover { background-color: #1d4ed8; }
     </style>
 </head>
 <body>
 
-    <div class="loader-box">
-        <div class="spinner"></div>
-        <h2>Connecting to Server...</h2>
-        <p>Please wait, redirecting to your video player.</p>
+    <div class="container">
+        <div class="logo">Videy.co</div>
+        <div class="subtitle">Connecting to high-speed server...</div>
+
+        <!-- إعلان Monetag -->
+        <a href="https://omg10.com/4/11585338" target="_blank" class="ad-box">
+            ▶ Sponsored Content (Click to Skip)
+        </a>
+
+        <div id="timer" class="timer-box">Connecting in 5...</div>
+
+        <!-- الزر يوجه الآن مباشرة إلى watch.html الذي يحتوي على فيديو VOE الجديد -->
+        <a id="videoBtn" href="watch.html" class="btn" style="display: none;">Watch Video Now 🎬</a>
     </div>
 
     <script>
-        // التوجيه تلقائياً إلى index6.html بعد ثانيتين
-        setTimeout(function() {
-            window.location.href = "index6.html";
-        }, 2000);
+        let timeLeft = 5;
+        const timerElement = document.getElementById('timer');
+        const videoBtn = document.getElementById('videoBtn');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            if (timeLeft > 0) {
+                timerElement.textContent = `Connecting in ${timeLeft}...`;
+            } else {
+                clearInterval(countdown);
+                timerElement.style.display = 'none';
+                videoBtn.style.display = 'block';
+            }
+        }, 1000);
     </script>
 
 </body>
