@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- كود التحقق الخاص بـ Monetag -->
     <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
-    
-    <title>Videy.co | Redirecting...</title>
-    <script>
-        // التحويل المباشر لصفحة السيرفرات الجديدة الإصدار السادس
-        window.location.replace("links6.html");
-    </script>
+    <title>Videy.co | Player</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #070a12; color: #ffffff; font-family: system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px; }
+        .main-content { width: 100%; max-width: 850px; display: flex; flex-direction: column; align-items: center; }
+        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid #374151; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, <a href="links6.html">click here</a>.</p>
+
+    <div class="main-content">
+        <div class="video-container">
+            <iframe src="https://voe.sx/e/hcq9kygzgevf" allowfullscreen allowtransparency allow="autoplay; encrypted-media; picture-in-picture" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+
 </body>
 </html>
