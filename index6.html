@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
-    <title>مشاهدة الفيديو | HD Stream</title>
+    <title>مشاهدة الفيديو | اختار السيرفر</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #070a12; color: #ffffff; font-family: system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px; }
-        .container { width: 100%; max-width: 850px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .player-card { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid #1f2937; }
-        .player-card iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .ad-button { display: block; width: 100%; background-color: #2563eb; color: #ffffff; text-align: center; padding: 16px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; }
+        body { background-color: #070a12; color: #ffffff; font-family: system-ui, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; width: 100%; max-width: 500px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        h1 { font-size: 20px; margin-bottom: 20px; color: #58a6ff; }
+        .btn { display: block; width: 100%; padding: 14px; margin: 10px 0; background-color: #238636; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; border: none; cursor: pointer; transition: 0.2s; }
+        .btn:hover { background-color: #2ea043; }
+        .btn-alt { background-color: #1f6feb; }
+        .btn-alt:hover { background-color: #388bfd; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="player-card">
-            <iframe src="https://voe.sx/e/hcq9kygzgevf" allowfullscreen allowtransparency allow="autoplay; encrypted-media; picture-in-picture" scrolling="no" frameborder="0"></iframe>
-        </div>
-        <a href="https://omg10.com/4/11585338" target="_blank" class="ad-button">▶ اضغط هنا لمشاهدة الفيديو بالسيرفر السريع HD</a>
+
+    <div class="card">
+        <h1>اختر سيرفر المشاهدة المفضل</h1>
+        
+        <!-- السيرفر 1: الفيديو الأصلي -->
+        <a href="https://voe.sx/e/hcq9kygzgevf" target="_blank" class="btn">▶ سيرفر 1: المشاهدة المباشرة (VOE HD)</a>
+        
+        <!-- السيرفر 2: رابط Monetag المباشر -->
+        <a href="https://omg10.com/4/11585338" target="_blank" class="btn btn-alt">⚡ سيرفر 2: التحميل السريع (Direct)</a>
+        
+        <!-- السيرفر 3: رابط الإعلان الثاني -->
+        <a href="https://omg10.com/4/11585338" target="_blank" class="btn">🚀 سيرفر 3: مشاهدة بدون إعلانات (VIP)</a>
+        
+        <!-- السيرفر 4: رابط احتياطي -->
+        <a href="https://omg10.com/4/11585338" target="_blank" class="btn btn-alt">📲 سيرفر 4: سيرفر الهواتف الذكية (Fast)</a>
     </div>
+
 </body>
 </html>
