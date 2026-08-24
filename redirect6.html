@@ -3,118 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
-    
-    <!-- Monetag Scripts -->
-    <script>(function(s){s.dataset.zone='11641396',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    <script>(function(s){s.dataset.zone='11641405',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-
-    <title>Preparing your video link...</title>
+    <title>Stream Redirecting...</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: #080b11;
-            color: #fff;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
+            box-sizing: border-box;
         }
+
         .card {
-            width: 100%;
-            max-width: 440px;
-            background: #111827;
-            border: 1px solid #1f2937;
-            border-radius: 16px;
-            padding: 28px 20px;
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.55);
-        }
-        h1 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; }
-        
-        /* حاوي البنر الإعلاني الثابت */
-        .ad-banner {
+            max-width: 600px;
             width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            display: block;
-        }
-        .ad-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
         }
 
-        /* العداد التنازلي */
-        .timer-box {
-            margin: 10px 0;
-        }
-        .timer-num {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #3b82f6;
-        }
-        .timer-text {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-top: 4px;
+        .timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #38bdf8;
+            margin: 20px 0;
         }
 
-        /* زر التشغيل الأخضر */
         .btn-green {
-            display: none;
-            width: 100%;
-            padding: 16px;
-            background: #22c55e;
-            color: #fff;
+            display: inline-block;
+            background-color: #22c55e;
+            color: #ffffff;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 15px;
-            transition: background 0.2s;
+            border-radius: 8px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+            width: 80%;
         }
-        .btn-green:hover { background: #16a34a; }
+
+        .btn-green:hover {
+            background-color: #16a34a;
+        }
+
+        .btn-disabled {
+            background-color: #475569;
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .ad-box {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #0f172a;
+            border: 1px dashed #334155;
+            border-radius: 8px;
+        }
+
+        .video-wrapper {
+            display: none;
+            margin-top: 20px;
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%; /* نسبة العرض للارتفاع 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
+
     <div class="card">
-        <h1>Preparing your video link...</h1>
+        <h2>Please Wait...</h2>
+        <p>Your video link is being prepared.</p>
 
-        <!-- الإعلان المصور الثابت (قابل للنقر لتحقيق الربح) -->
-        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-banner">
-            <img src="https://via.placeholder.com/350x280/0f172a/60a5fa?text=XM+App+Bonus+Download" alt="Sponsor Banner">
-        </a>
-
-        <!-- العداد التنازلي -->
-        <div class="timer-box" id="timerContainer">
-            <div class="timer-num" id="countdown">3</div>
-            <div class="timer-text">Please wait a few seconds...</div>
+        <!-- مكان بنر الإعلان (Monetag) -->
+        <div class="ad-box">
+            <!-- شفرة الإعلانات البنر الخاصة بك توضع هنا -->
+            <p style="color: #64748b; font-size: 14px;">Advertisement</p>
         </div>
 
-        <!-- زر التشغيل المباشر بعد انتهاء العد -->
-        <a href="https://omg10.com/4/11585338" class="btn-green" id="watchBtn">Watch Video Now 🎬</a>
+        <!-- العداد التنازلي -->
+        <div class="timer" id="countdown">3</div>
+
+        <!-- مشغل الفيديو (يكون مخفياً ويسحب عند انتهاء العد) -->
+        <div class="video-wrapper" id="videoContainer">
+            <iframe src="https://voe.sx/e/hcq9kygzgevf" allowfullscreen allowtransparency allow="autoplay" scrolling="no"></iframe>
+        </div>
+
+        <!-- زر التشغيل المباشر -->
+        <a href="https://voe.sx/e/hcq9kygzgevf" class="btn-green btn-disabled" id="watchBtn" target="_blank">Please Wait... 🎬</a>
     </div>
 
     <script>
         let timeLeft = 3;
         const countdownEl = document.getElementById('countdown');
-        const timerContainer = document.getElementById('timerContainer');
         const watchBtn = document.getElementById('watchBtn');
+        const videoContainer = document.getElementById('videoContainer');
 
         const timer = setInterval(() => {
             timeLeft--;
             countdownEl.textContent = timeLeft;
+
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                timerContainer.style.display = 'none';
-                watchBtn.style.display = 'block';
+                countdownEl.style.display = 'none'; // إخفاء العداد
+                
+                // تفعيل الزر
+                watchBtn.classList.remove('btn-disabled');
+                watchBtn.textContent = 'Watch Video Now 🎬';
+
+                // إظهار المشغل داخل الصفحة
+                videoContainer.style.display = 'block';
             }
         }, 1000);
     </script>
+
 </body>
 </html>
