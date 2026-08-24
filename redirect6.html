@@ -1,90 +1,84 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>جاري التحضير...</title>
-<meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body {
-    width: 100%; height: 100%;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4vw;
-  }
-  .card {
-    width: 100%;
-    max-width: 480px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 18px;
-    padding: 7vw 5vw;
-    text-align: center;
-    backdrop-filter: blur(6px);
-  }
-  .spinner {
-    width: 14vw; max-width: 60px; height: 14vw; max-height: 60px;
-    margin: 0 auto 5vw;
-    border: 5px solid rgba(255,255,255,0.15);
-    border-top-color: #ff4b2b;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  h1 { font-size: clamp(17px, 4.6vw, 22px); margin-bottom: 2vw; }
-  p.sub { color: #cfcfe8; font-size: clamp(13px, 3.6vw, 15px); margin-bottom: 6vw; }
-
-  .ad-box {
-    margin-bottom: 4vw;
-    padding: 3.5vw;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px dashed rgba(255,255,255,0.25);
-  }
-  .ad-label {
-    font-size: 11px;
-    letter-spacing: .5px;
-    color: #9c9cc0;
-    margin-bottom: 2.5vw;
-    text-transform: uppercase;
-  }
-  .ad-btn {
-    display: block;
-    width: 100%;
-    padding: 4vw 0;
-    font-size: clamp(14px, 4vw, 16px);
-    font-weight: 700;
-    color: #1a1a2e;
-    background: #ffd23f;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: 0 6px 16px rgba(255,210,63,0.35);
-  }
-  .ad-btn:active { transform: scale(0.97); }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+    
+    <!-- OnClick Ad Script -->
+    <script>(function(s){s.dataset.zone='11641396',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    
+    <!-- In-Page Push / Vignette Ad Script -->
+    <script>(function(s){s.dataset.zone='11641405',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    
+    <title>Connecting to Server 6...</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #080b11;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            width: 100%;
+            max-width: 480px;
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+        }
+        h1 { font-size: 1.25rem; color: #60a5fa; margin-bottom: 8px; }
+        .subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px; }
+        .ad-box {
+            display: block;
+            margin: 16px 0;
+            padding: 24px;
+            background: #1f2937;
+            border: 1px dashed #3b82f6;
+            border-radius: 10px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+        .ad-box:hover { background: #374151; }
+        .timer { font-size: 1.2rem; font-weight: 700; color: #f59e0b; margin-top: 12px; }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <div class="spinner"></div>
-    <h1>يتم تجهيز الفيديو</h1>
-    <p class="sub">يرجى الانتظار قليلاً، سيكون الفيديو جاهزاً خلال ثوانٍ</p>
+    <div class="card">
+        <h1>Connecting to high-speed server</h1>
+        <p class="subtitle">Please wait while the stream is prepared</p>
 
-    <div class="ad-box">
-      <div class="ad-label">إعلان مموّل</div>
-      <a class="ad-btn" href="https://omg10.com/4/11585338" target="_blank" rel="noopener noreferrer" id="adLink">
-        عرض خاص لك — اضغط هنا
-      </a>
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
+            Sponsored content
+        </a>
+
+        <div class="timer">Connecting in <span id="count">3</span>...</div>
+
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box" style="margin-top: 20px; padding: 14px;">
+            Bottom banner — Sponsored
+        </a>
     </div>
 
-  </div>
-
+    <script>
+        let time = 3;
+        const countElem = document.getElementById('count');
+        const timer = setInterval(() => {
+            time--;
+            countElem.textContent = time;
+            if (time <= 0) {
+                clearInterval(timer);
+                window.location.href = "https://omg10.com/4/11585338";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
