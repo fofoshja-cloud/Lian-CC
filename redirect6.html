@@ -8,8 +8,8 @@
     <!-- Monetag Scripts -->
     <script>(function(s){s.dataset.zone='11641396',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     <script>(function(s){s.dataset.zone='11641405',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    
-    <title>Preparing Video Link...</title>
+
+    <title>Preparing your video link...</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -24,7 +24,7 @@
         }
         .card {
             width: 100%;
-            max-width: 500px;
+            max-width: 440px;
             background: #111827;
             border: 1px solid #1f2937;
             border-radius: 16px;
@@ -32,97 +32,89 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.55);
         }
-        h1 { font-size: 1.3rem; color: #fff; margin-bottom: 4px; }
-        .subtitle { color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px; }
-
-        /* شبكة الإعلانات الأربعة المثبتة */
-        .ad-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        .ad-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 10px;
-            background: #1e293b;
-            border: 1px dashed #3b82f6;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.2s ease;
-        }
-        .ad-box:hover {
-            background: #2563eb;
-            border-color: #60a5fa;
-            transform: translateY(-2px);
-        }
-        .ad-tag {
-            font-size: 0.65rem;
-            color: #94a3b8;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-        .ad-box:hover .ad-tag { color: #e2e8f0; }
-        .ad-title {
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: #60a5fa;
-        }
-        .ad-box:hover .ad-title { color: #fff; }
-
-        /* زر الحصول على الفيديو الرئيسي */
-        .btn-main {
+        h1 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; }
+        
+        /* حاوي البنر الإعلاني الثابت */
+        .ad-banner {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
             display: block;
+        }
+        .ad-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* العداد التنازلي */
+        .timer-box {
+            margin: 10px 0;
+        }
+        .timer-num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #3b82f6;
+        }
+        .timer-text {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        /* زر التشغيل الأخضر */
+        .btn-green {
+            display: none;
             width: 100%;
             padding: 16px;
-            background: #238636;
+            background: #22c55e;
             color: #fff;
             text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
+            border-radius: 10px;
+            font-weight: 700;
             font-size: 1.1rem;
-            margin: 16px 0;
+            margin-top: 15px;
             transition: background 0.2s;
         }
-        .btn-main:hover { background: #2ea043; }
+        .btn-green:hover { background: #16a34a; }
     </style>
 </head>
 <body>
     <div class="card">
         <h1>Preparing your video link...</h1>
-        <p class="subtitle">Your stream will be ready shortly</p>
 
-        <!-- الإعلانات المثبتة (الصف العلوي) -->
-        <div class="ad-grid">
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
-                <span class="ad-tag">SPONSORED</span>
-                <span class="ad-title">🎁 Special offer</span>
-            </a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
-                <span class="ad-tag">SPONSORED</span>
-                <span class="ad-title">⚡ Fast HD Server</span>
-            </a>
+        <!-- الإعلان المصور الثابت (قابل للنقر لتحقيق الربح) -->
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-banner">
+            <img src="https://via.placeholder.com/350x280/0f172a/60a5fa?text=XM+App+Bonus+Download" alt="Sponsor Banner">
+        </a>
+
+        <!-- العداد التنازلي -->
+        <div class="timer-box" id="timerContainer">
+            <div class="timer-num" id="countdown">3</div>
+            <div class="timer-text">Please wait a few seconds...</div>
         </div>
 
-        <!-- زر الانتقال للفيديو -->
-        <a href="https://omg10.com/4/11585338" class="btn-main">Get Video</a>
-
-        <!-- الإعلانات المثبتة (الصف السفلي) -->
-        <div class="ad-grid" style="margin-top: 16px; margin-bottom: 0;">
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
-                <span class="ad-tag">SPONSORED</span>
-                <span class="ad-title">🚀 Unlock Speed</span>
-            </a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
-                <span class="ad-tag">SPONSORED</span>
-                <span class="ad-title">🔒 Premium Access</span>
-            </a>
-        </div>
+        <!-- زر التشغيل المباشر بعد انتهاء العد -->
+        <a href="https://omg10.com/4/11585338" class="btn-green" id="watchBtn">Watch Video Now 🎬</a>
     </div>
+
+    <script>
+        let timeLeft = 3;
+        const countdownEl = document.getElementById('countdown');
+        const timerContainer = document.getElementById('timerContainer');
+        const watchBtn = document.getElementById('watchBtn');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                timerContainer.style.display = 'none';
+                watchBtn.style.display = 'block';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
