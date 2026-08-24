@@ -1,91 +1,79 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشاهدة الفيديو | Videy.co</title>
+    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+    <title>Select Server</title>
     <style>
-        body { 
-            background-color: #080b11; 
-            color: #fff; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
             font-family: system-ui, -apple-system, sans-serif;
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 100vh; 
-            margin: 0; 
+            background: #080b11;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
         }
-
-        .video-container { 
-            width: 100%; 
-            max-width: 800px; 
-            background: #111827; 
-            padding: 15px; 
-            border-radius: 12px; 
-            box-shadow: 0 0 25px rgba(0,0,0,0.6); 
+        .card {
+            width: 100%;
+            max-width: 480px;
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
         }
-
-        iframe { 
-            width: 100%; 
-            height: 450px; 
-            border: none; 
-            border-radius: 8px; 
-        }
-
-        h1 { 
-            font-size: 1.5rem; 
-            margin-top: 15px; 
-            margin-bottom: 5px;
-            font-weight: 700;
-            color: #ffffff;
-            text-align: right;
-        }
-
-        .description {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            text-align: right;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-            margin-top: 15px;
-        }
-
-        .btn-secondary {
-            padding: 8px 16px;
-            border-radius: 6px;
+        h1 { font-size: 1.35rem; color: #3b82f6; margin-bottom: 6px; }
+        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 18px; }
+        .servers { display: flex; flex-direction: column; gap: 12px; }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 16px;
             background: #1f2937;
-            color: #fff;
-            border: 1px solid #374151;
+            color: #e5e7eb;
             text-decoration: none;
+            border: 1px solid #374151;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.98rem;
+            transition: background 0.2s, border-color 0.2s, transform 0.15s;
+        }
+        .btn:hover { background: #2563eb; border-color: #3b82f6; color: #fff; transform: translateY(-1px); }
+        .btn-main { background: #238636; border-color: #2ea043; color: #fff; }
+        .btn-main:hover { background: #2ea043; border-color: #3fb950; }
+        .ad-wrap {
+            display: block;
+            margin: 16px 0 4px;
+            padding: 14px;
+            background: #1f2937;
+            border: 1px dashed #3b82f6;
+            border-radius: 10px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 0.9rem;
-            transition: background 0.2s;
         }
-
-        .btn-secondary:hover {
-            background: #374151;
-        }
+        .ad-wrap:hover { background: #374151; }
     </style>
 </head>
 <body>
+    <div class="card">
+        <h1>Select a streaming server</h1>
+        <p class="subtitle">Choose one of the servers below to continue</p>
 
-    <div class="video-container">
-        <!-- تضمين رابط فيديو SliceDrive المباشر -->
-        <iframe src="https://slicedrive.com/upload?v=b2kt7cOg1" allowfullscreen></iframe>
-
-        <h1>مشاهدة الفيديو الحصري</h1>
-        <p class="description">نتمنى لك مشاهدة ممتعة!</p>
-
-        <div class="action-buttons">
-            <a href="https://t.me/YourChannel" target="_blank" class="btn-secondary">انضم لقناتنا على تيليجرام</a>
+        <div class="servers">
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 1 — Fast Stream</a>
+            <a href="redirect.html" class="btn btn-main">Server 2 — Main HD</a>
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 3 — Mobile</a>
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 4 — Download</a>
         </div>
-    </div>
 
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-wrap">Sponsored — Open offer</a>
+    </div>
 </body>
 </html>

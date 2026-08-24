@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+    <title>Watch video</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #070a12;
+            color: #fff;
+            min-height: 100vh;
+            padding: 12px;
+        }
+        .layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 14px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .side-ad {
+            width: 160px;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111827;
+            border: 1px dashed #374151;
+            border-radius: 10px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            padding: 12px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .side-ad:hover { background: #1f2937; }
+        .main {
+            flex: 1;
+            max-width: 860px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            background: #111827;
+            border: 1px dashed #3b82f6;
+            border-radius: 10px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 12px;
+        }
+        .banner:hover { background: #1f2937; }
+        .player {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .player iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        @media (max-width: 1024px) {
+            .side-ad { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="side-ad">Sponsored</a>
+
+        <div class="main">
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="banner">Top banner — Sponsored</a>
+
+            <div class="player">
+                <iframe
+                    src="https://voe.sx/e/hcq9kygzgevf"
+                    allowfullscreen
+                    allowtransparency
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    scrolling="no"
+                    title="Video player"
+                ></iframe>
+            </div>
+
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="banner">Bottom banner — Sponsored</a>
+        </div>
+
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="side-ad">Sponsored</a>
+    </div>
+</body>
+</html>

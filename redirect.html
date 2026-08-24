@@ -1,122 +1,107 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videy.co | جاري تجهيز الفيديو</title>
+    <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
+    <title>Connecting to server</title>
     <style>
-        body { 
-            font-family: system-ui, -apple-system, sans-serif; 
-            background-color: #080b11; 
-            color: #ffffff; 
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #080b11;
+            color: #fff;
             min-height: 100vh;
-        }
-        .container {
-            text-align: center;
-            max-width: 480px;
-            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
         }
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #3b82f6;
-            margin-bottom: 8px;
-        }
-        .subtitle {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-        }
-        .ad-box {
+        .card {
+            width: 100%;
+            max-width: 440px;
             background: #111827;
-            border: 1px dashed #374151;
-            border-radius: 12px;
-            min-height: 220px;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+        }
+        h1 { font-size: 1.3rem; color: #3b82f6; margin-bottom: 6px; }
+        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 16px; }
+        .timer {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #f59e0b;
+            margin: 8px 0 16px;
+        }
+        .ad-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b7280;
-            margin-bottom: 25px;
-            padding: 10px;
-        }
-        .timer-text {
-            color: #60a5fa;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        .btn {
             width: 100%;
-            padding: 14px 20px;
-            font-size: 1rem;
-            font-weight: 600;
+            max-width: 300px;
+            min-height: 120px;
+            margin: 0 auto 18px;
+            background: #1f2937;
+            border: 1px dashed #3b82f6;
             border-radius: 10px;
-            border: none;
-            cursor: pointer;
-            background-color: #2563eb;
-            color: #ffffff;
-            box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
-            transition: background 0.2s;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 700;
         }
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-        .skip-container {
-            width: 100%;
+        .ad-wrap:hover { background: #374151; }
+        .btn {
             display: none;
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        .btn.is-ready { display: block; }
+        .btn:hover { background: #1d4ed8; }
+        .btn:disabled,
+        .btn[aria-disabled="true"] {
+            pointer-events: none;
+            opacity: 0.45;
+            background: #374151;
         }
     </style>
 </head>
 <body>
+    <div class="card">
+        <h1>Connecting to high-speed server</h1>
+        <p class="subtitle">Please wait while the stream is prepared</p>
 
-    <div class="container">
-        <div class="logo">Videy.co</div>
-        <div class="subtitle">الفيديو جاهز للتشغيل. المرجو الانتظار قليلاً 👇</div>
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-wrap">Sponsored content</a>
 
-        <!-- مساحة إعلانية -->
-        <div class="ad-box">
-            [ مساحة إعلانية ]
-        </div>
+        <div id="timer" class="timer">Connecting in 5…</div>
 
-        <div id="timerText" class="timer-text">المرجو الانتظار... 5 ثواني</div>
-
-        <div id="skipContainer" class="skip-container">
-            <button onclick="goToLink()" class="btn">
-                ▶ التخطي ومشاهدة الفيديو
-            </button>
-        </div>
+        <a id="watchBtn" href="watch.html" class="btn" aria-disabled="true">Watch video</a>
     </div>
 
     <script>
-        let timeLeft = 5;
-        const timerText = document.getElementById('timerText');
-        const skipContainer = document.getElementById('skipContainer');
-        const urlParams = new URLSearchParams(window.location.search);
-        
-        const finalUrl = urlParams.get('to') || 'index.html';
+        (function () {
+            var timeLeft = 5;
+            var timerEl = document.getElementById("timer");
+            var btn = document.getElementById("watchBtn");
 
-        const countdown = setInterval(() => {
-            timeLeft--;
-            timerText.innerText = `المرجو الانتظار... ${timeLeft} ثواني`;
-
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
-                timerText.style.display = 'none';
-                skipContainer.style.display = 'block';
-            }
-        }, 1000);
-
-        function goToLink() {
-            // فتح رابط الإعلان الربحي في تبويب جديد
-            window.open('https://www.effectivecpmnetwork.com/gy9bg11e?key=40da921c0cb0f6fd8ae0294842244431', '_blank');
-            // التوجه إلى صفحة الفيديو
-            window.location.href = finalUrl;
-        }
+            var tick = setInterval(function () {
+                timeLeft -= 1;
+                if (timeLeft > 0) {
+                    timerEl.textContent = "Connecting in " + timeLeft + "…";
+                    return;
+                }
+                clearInterval(tick);
+                timerEl.textContent = "Ready";
+                btn.classList.add("is-ready");
+                btn.removeAttribute("aria-disabled");
+            }, 1000);
+        })();
     </script>
-
 </body>
 </html>
