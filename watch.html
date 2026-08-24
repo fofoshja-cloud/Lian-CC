@@ -15,19 +15,20 @@
             padding: 12px;
         }
         .layout {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 160px minmax(0, 1fr) 160px;
             gap: 14px;
+            align-items: start;
             max-width: 1280px;
             margin: 0 auto;
         }
         .side-ad {
-            width: 160px;
-            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 160px;
+            min-height: 450px;
+            padding: 12px;
             background: #111827;
             border: 1px dashed #374151;
             border-radius: 10px;
@@ -35,14 +36,10 @@
             text-decoration: none;
             font-weight: 700;
             text-align: center;
-            padding: 12px;
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
         }
         .side-ad:hover { background: #1f2937; }
         .main {
-            flex: 1;
-            max-width: 860px;
+            min-width: 0;
             display: flex;
             flex-direction: column;
             gap: 14px;
@@ -51,35 +48,43 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex: 0 0 auto;
             min-height: 90px;
+            padding: 12px;
             background: #111827;
             border: 1px dashed #3b82f6;
             border-radius: 10px;
             color: #60a5fa;
             text-decoration: none;
             font-weight: 700;
-            padding: 12px;
         }
         .banner:hover { background: #1f2937; }
         .player {
             position: relative;
+            z-index: 1;
             width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
+            min-height: 450px;
             background: #000;
             border: 1px solid #1f2937;
             border-radius: 12px;
             overflow: hidden;
         }
         .player iframe {
-            position: absolute;
-            inset: 0;
+            display: block;
             width: 100%;
-            height: 100%;
+            min-height: 450px;
+            height: clamp(450px, 56.25vw, 560px);
             border: 0;
+            background: #000;
         }
         @media (max-width: 1024px) {
-            .side-ad { display: none; }
+            .layout {
+                grid-template-columns: 1fr;
+            }
+            .side-ad {
+                width: 100%;
+                min-height: 90px;
+            }
         }
     </style>
 </head>
@@ -93,10 +98,12 @@
             <div class="player">
                 <iframe
                     src="https://voe.sx/e/hcq9kygzgevf"
+                    width="100%"
                     allowfullscreen
                     allowtransparency
                     allow="autoplay; encrypted-media; picture-in-picture"
                     scrolling="no"
+                    frameborder="0"
                     title="Video player"
                 ></iframe>
             </div>
