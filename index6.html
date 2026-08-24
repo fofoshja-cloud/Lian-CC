@@ -1,33 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
-    <title>اختر سيرفر المشاهدة</title>
+
+    <meta property="og:title" content="Videy.co | Watch New Video HD">
+    <meta property="og:description" content="Click here to choose a fast server and stream the video in high quality.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://videy.co/assets/png/videy.png">
+
+    <title>Videy.co | Select Server</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #0d1117; color: #ffffff; font-family: system-ui, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 25px; width: 100%; max-width: 480px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        h1 { font-size: 20px; margin-bottom: 20px; color: #58a6ff; }
-        .btn { display: block; width: 100%; padding: 14px; margin: 10px 0; background-color: #21262d; color: #c9d1d9; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 15px; border: 1px solid #30363d; transition: 0.2s; }
-        .btn:hover { background-color: #30363d; color: #fff; }
-        .btn-real { background-color: #238636; color: #ffffff; border: none; }
-        .btn-real:hover { background-color: #2ea043; }
+        body { font-family: system-ui, sans-serif; background-color: #080b11; color: #ffffff; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px 0; }
+        .container { text-align: center; max-width: 480px; width: 90%; padding: 25px; background: #111827; border-radius: 16px; border: 1px solid #1f2937; }
+ logo { font-size: 2.2rem; font-weight: 800; color: #3b82f6; margin-bottom: 8px; }
+        .subtitle { color: #94a3b8; font-size: 0.95rem; margin-bottom: 25px; }
+        .links-list { display: flex; flex-direction: column; gap: 15px; }
+        .link-card { display: flex; align-items: center; justify-content: space-between; background-color: #1f2937; padding: 14px 18px; border-radius: 12px; border: 1px solid #374151; text-decoration: none; color: #ffffff; transition: all 0.2s ease; }
+        .link-card:hover { background-color: #2563eb; border-color: #3b82f6; transform: translateY(-2px); }
+        .link-title { font-size: 1rem; font-weight: 600; }
+        .link-icon { font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>اختر سيرفر المشاهدة المفضل</h1>
-        
-        <!-- سيرفرات 1 و 2 و 3 (Fake / توجيه للإعلان مباشر) -->
-        <a href="https://omg10.com/4/11585338" target="_blank" class="btn">⚡ سيرفر 1: مشاهدة مباشرة (Fast Server)</a>
-        <a href="https://omg10.com/4/11585338" target="_blank" class="btn">🚀 سيرفر 2: سيرفر تحفيز السرعة (VIP)</a>
-        <a href="https://omg10.com/4/11585338" target="_blank" class="btn">📲 سيرفر 3: سيرفر الأجهزة الضعيفة</a>
-        
-        <!-- السيرفر 4 (الحقيقي / يوجه لصفحة الانتظار) -->
-        <a href="watch.html" class="btn btn-real">▶ سيرفر 4: السيرفر الرئيسي (VOE HD)</a>
+    <div class="container">
+        <div class="logo">Videy.co</div>
+        <div class="subtitle">Select one of the servers below to watch the video 👇</div>
+
+        <div class="links-list">
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="link-card">
+                <span class="link-title">▶ Fast Server (1)</span>
+                <span class="link-icon">⚡</span>
+            </a>
+
+            <!-- التوجيه لصفحة العداد redirect.html -->
+            <a href="redirect.html?v=10" class="link-card">
+                <span class="link-title">▶ Main Server (2)</span>
+                <span class="link-icon">🎬</span>
+            </a>
+
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="link-card">
+                <span class="link-title">▶ HD Server (3)</span>
+                <span class="link-icon">💎</span>
+            </a>
+
+            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="link-card">
+                <span class="link-title">▶ Download Server (4)</span>
+                <span class="link-icon">📥</span>
+            </a>
+        </div>
     </div>
 
 </body>
