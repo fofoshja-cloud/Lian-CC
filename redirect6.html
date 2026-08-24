@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="monetag" content="f599610ff2392b0a0e08ae723a6fcc4f">
     
-    <!-- OnClick Ad Script -->
+    <!-- Monetag Scripts -->
     <script>(function(s){s.dataset.zone='11641396',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    
-    <!-- In-Page Push / Vignette Ad Script -->
     <script>(function(s){s.dataset.zone='11641405',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     
-    <title>Connecting to Server 6...</title>
+    <title>Preparing Stream - Server 6</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -39,7 +37,7 @@
         .ad-box {
             display: block;
             margin: 16px 0;
-            padding: 24px;
+            padding: 16px;
             background: #1f2937;
             border: 1px dashed #3b82f6;
             border-radius: 10px;
@@ -49,34 +47,51 @@
             transition: background 0.2s;
         }
         .ad-box:hover { background: #374151; }
-        .timer { font-size: 1.2rem; font-weight: 700; color: #f59e0b; margin-top: 12px; }
+        .btn-continue {
+            display: none;
+            width: 100%;
+            padding: 14px;
+            background: #238636;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .btn-continue:hover { background: #2ea043; }
+        .timer { font-size: 1.1rem; font-weight: 600; color: #f59e0b; margin: 15px 0; }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>Connecting to high-speed server</h1>
-        <p class="subtitle">Please wait while the stream is prepared</p>
+        <h1>Preparing Stream Link</h1>
+        <p class="subtitle">Please support us by checking our sponsors below</p>
 
         <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box">
-            Sponsored content
+            Sponsored Offer — Click to Open
         </a>
 
-        <div class="timer">Connecting in <span id="count">3</span>...</div>
+        <div class="timer" id="timer-text">Ready in <span id="count">3</span> seconds...</div>
+        <a href="https://omg10.com/4/11585338" id="go-btn" class="btn-continue">Go to Stream Link</a>
 
-        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box" style="margin-top: 20px; padding: 14px;">
-            Bottom banner — Sponsored
+        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-box" style="margin-top: 20px;">
+            Bottom Banner — Special Deal
         </a>
     </div>
 
     <script>
         let time = 3;
         const countElem = document.getElementById('count');
+        const timerText = document.getElementById('timer-text');
+        const goBtn = document.getElementById('go-btn');
+
         const timer = setInterval(() => {
             time--;
             countElem.textContent = time;
             if (time <= 0) {
                 clearInterval(timer);
-                window.location.href = "https://omg10.com/4/11585338";
+                timerText.style.display = 'none';
+                goBtn.style.display = 'block';
             }
         }, 1000);
     </script>
