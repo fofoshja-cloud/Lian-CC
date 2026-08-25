@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preparing High Speed Stream...</title>
+    <title>Preparing Stream...</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,67 +14,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
+            padding: 15px;
         }
-
-        /* تنسيق الحاويات الإعلانية General Ad Placeholders */
-        .ad-slot {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(148, 163, 184, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .ad-top, .ad-bottom {
-            width: 100%;
-            max-width: 970px;
-            min-height: 90px;
-        }
-
-        .ad-side {
-            width: 160px;
-            min-height: 600px;
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .ad-left { left: 10px; }
-        .ad-right { right: 10px; }
-
-        /* البطاقة الرئيسية التي تحتوي العداد والفيديو */
-        .main-wrapper {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            z-index: 10;
-        }
-
+        .main-wrapper { width: 100%; max-width: 650px; margin: 0 auto; }
         .card {
             width: 100%;
             background: linear-gradient(145deg, rgba(17,24,39,.98), rgba(10,15,25,.98));
             border: 1px solid rgba(148,163,184,.12);
             border-radius: 20px;
-            padding: 24px;
+            padding: 16px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.55);
         }
-
-        h2 { font-size: 1.2rem; color: #94a3b8; margin-bottom: 12px; }
-        
-        .timer-box {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #3b82f6;
-            margin: 10px 0;
+        .ad-box {
+            width: 100%;
+            min-height: 250px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .timer-text { color: #64748b; font-size: 0.85rem; margin-bottom: 20px; }
-
+        h2 { font-size: 1.1rem; color: #94a3b8; margin-bottom: 8px; }
+        .timer-box { font-size: 2.5rem; font-weight: 800; color: #3b82f6; }
         .video-wrapper {
             display: none;
             width: 100%;
@@ -83,49 +43,36 @@
             height: 0;
             overflow: hidden;
             border-radius: 12px;
-            border: 1px solid rgba(148,163,184,.14);
         }
         .video-wrapper iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: 0;
-        }
-
-        /* إخفاء إعلانات الجوانب على الشاشات الصغيرة لتجنب تغطية المحتوى */
-        @media (max-width: 1150px) {
-            .ad-side { display: none; }
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; border: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- إعلان 1: إعلان علوي عريض (Top Leaderboard) -->
-    <div class="ad-slot ad-top">
-        <!-- ضع كود Adsterra هنا (مثلاً مقاس 728x90 أو 468x60) -->
-    </div>
-
-    <!-- إعلان 2: إعلان جانبي أيسر (Left Skyscraper) -->
-    <div class="ad-slot ad-side ad-left">
-        <!-- ضع كود Adsterra هنا (مقاس 160x600) -->
-    </div>
-
-    <!-- إعلان 3: إعلان جانبي أيمن (Right Skyscraper) -->
-    <div class="ad-slot ad-side ad-right">
-        <!-- ضع كود Adsterra هنا (مقاس 160x600) -->
-    </div>
-
     <div class="main-wrapper">
+        
+        <!-- إعلان 1: عالي المشغل -->
+        <div class="ad-box">
+            <script>
+  atOptions = {
+    'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+
+        </div>
+
         <div class="card">
             <div id="waitScreen">
                 <h2>Preparing high speed stream...</h2>
                 <div class="timer-box" id="countdown">5</div>
-                <div class="timer-text">Please wait 5 seconds while we load your video</div>
-
-                <!-- إعلان 4: إعلان أوسط تحت العداد (In-Card Banner) -->
-                <div class="ad-slot" style="min-height:250px;">
-                    <!-- ضع كود Adsterra هنا (مقاس 300x250) -->
-                </div>
             </div>
 
             <div class="video-wrapper" id="videoContainer">
@@ -133,10 +80,21 @@
             </div>
         </div>
 
-        <!-- إعلان 5: إعلان سفلي تحت الفيديو/الكارت (Bottom Banner) -->
-        <div class="ad-slot ad-bottom">
-            <!-- ضع كود Adsterra هنا (مثلاً مقاس 728x90 أو 300x250) -->
+        <!-- إعلان 2: أسفل المشغل -->
+        <div class="ad-box">
+            <script>
+  atOptions = {
+    'key' : '516e6fd8004aeb4a93b7f7ab6c199f78',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+
         </div>
+
     </div>
 
     <script>
@@ -148,7 +106,6 @@
         const timer = setInterval(() => {
             timeLeft--;
             countdownEl.textContent = timeLeft;
-
             if (timeLeft <= 0) {
                 clearInterval(timer);
                 waitScreen.style.display = 'none';
@@ -156,6 +113,5 @@
             }
         }, 1000);
     </script>
-
 </body>
 </html>
