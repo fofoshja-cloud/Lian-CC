@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing Stream...</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #070b12;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+        .main-wrapper { width: 100%; max-width: 650px; margin: 0 auto; }
+        .card {
+            width: 100%;
+            background: linear-gradient(145deg, rgba(17,24,39,.98), rgba(10,15,25,.98));
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 20px;
+            padding: 16px;
+            text-align: center;
+        }
+        .ad-box {
+            width: 100%;
+            min-height: 250px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        h2 { font-size: 1.1rem; color: #94a3b8; margin-bottom: 8px; }
+        .timer-box { font-size: 2.5rem; font-weight: 800; color: #3b82f6; }
+        .video-wrapper {
+            display: none;
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .video-wrapper iframe {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        
+        <!-- إعلان 1: أعلى المشغل -->
+        <div class="ad-box">
+            <!-- ضع كود ADSTERRA BANNER هنا -->
+        </div>
+
+        <div class="card">
+            <div id="waitScreen">
+                <h2>Preparing high speed stream...</h2>
+                <div class="timer-box" id="countdown">5</div>
+            </div>
+
+            <!-- هنا تم وضع الفيديو الجديد بالتدقيق -->
+            <div class="video-wrapper" id="videoContainer">
+                <iframe src="https://voe.sx/e/odvx7zscfsyz" allowfullscreen allowtransparency allow="autoplay" scrolling="no"></iframe>
+            </div>
+        </div>
+
+        <!-- إعلان 2: أسفل المشغل -->
+        <div class="ad-box">
+            <!-- ضع كود ADSTERRA BANNER هنا -->
+        </div>
+
+    </div>
+
+    <script>
+        let timeLeft = 5;
+        const countdownEl = document.getElementById('countdown');
+        const waitScreen = document.getElementById('waitScreen');
+        const videoContainer = document.getElementById('videoContainer');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                waitScreen.style.display = 'none';
+                videoContainer.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
