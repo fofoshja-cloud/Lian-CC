@@ -3,226 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>VIDEOS - Select Server</title>
+    <title>Preparing High Speed Stream...</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background:
-                radial-gradient(circle at 50% -10%, rgba(37,99,235,.20), transparent 34%),
-                #070b12;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #070b12;
             color: #fff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 15px;
         }
-
         .card {
-            position: relative;
             width: 100%;
-            max-width: 470px;
-            padding: 34px 22px 24px;
-            border-radius: 26px;
+            max-width: 650px;
             background: linear-gradient(145deg, rgba(17,24,39,.98), rgba(10,15,25,.98));
             border: 1px solid rgba(148,163,184,.12);
-            box-shadow:
-                0 30px 70px rgba(0,0,0,.55),
-                inset 0 1px 0 rgba(255,255,255,.03);
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            width: 220px;
-            height: 220px;
-            top: -145px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 50%;
-            background: rgba(59,130,246,.16);
-            filter: blur(55px);
-            pointer-events: none;
-        }
-
-        h1 {
-            position: relative;
-            z-index: 1;
-            width: 100%;
+            border-radius: 20px;
+            padding: 24px;
             text-align: center;
-            margin: 0 auto 24px;
-            font-size: clamp(2.1rem, 8vw, 2.8rem);
-            line-height: 1;
-            font-weight: 950;
-            letter-spacing: .10em;
-            text-transform: uppercase;
-            background: linear-gradient(180deg, #ffffff 0%, #93c5fd 42%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 28px rgba(59,130,246,.28);
-            filter: drop-shadow(0 8px 18px rgba(0,0,0,.22));
+            box-shadow: 0 10px 30px rgba(0,0,0,0.55);
         }
-
-        h1::after {
-            content: "";
-            display: block;
-            width: 72px;
-            height: 3px;
-            margin: 12px auto 0;
-            border-radius: 999px;
-            background: linear-gradient(90deg, transparent, #60a5fa, transparent);
-            box-shadow: 0 0 14px rgba(96,165,250,.65);
-        }
-
-        .servers {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .server-card {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            min-height: 76px;
-            width: 100%;
-            padding: 16px 18px 16px 20px;
-            border-radius: 18px;
-            text-decoration: none;
-            color: #fff;
-            background: linear-gradient(145deg, #162033, #0e1625);
-            border: 1px solid rgba(148,163,184,.14);
-            box-shadow:
-                0 10px 24px rgba(0,0,0,.22),
-                inset 0 1px 0 rgba(255,255,255,.03);
-            transition:
-                transform .22s ease,
-                border-color .22s ease,
-                background .22s ease,
-                box-shadow .22s ease;
-            overflow: hidden;
-        }
-
-        .server-card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                105deg,
-                transparent 20%,
-                rgba(255,255,255,.06) 50%,
-                transparent 80%
-            );
-            transform: translateX(-120%);
-            transition: transform .65s ease;
-            pointer-events: none;
-        }
-
-        .server-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(96,165,250,.55);
-            background: linear-gradient(145deg, #1a2942, #101b2d);
-            box-shadow:
-                0 16px 34px rgba(0,0,0,.28),
-                0 0 0 1px rgba(96,165,250,.08);
-        }
-
-        .server-card:hover::before {
-            transform: translateX(120%);
-        }
-
-        .server-card.featured {
-            min-height: 86px;
-            border-color: rgba(96,165,250,.42);
-            background: linear-gradient(145deg, rgba(30,64,175,.36), rgba(15,23,42,.98));
-            box-shadow:
-                0 14px 32px rgba(30,64,175,.17),
-                inset 0 1px 0 rgba(255,255,255,.04);
-        }
-
-        .server-card .server-title {
-            font-size: 1.05rem;
+        h2 { font-size: 1.2rem; color: #94a3b8; margin-bottom: 12px; }
+        .timer-box {
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: -.01em;
-            color: #fff;
+            color: #3b82f6;
+            margin: 10px 0;
         }
-
-        .server-card .play-button {
-            width: 42px;
-            height: 42px;
-            flex: 0 0 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 13px;
-            color: #fff;
-            background: rgba(255,255,255,.07);
+        .timer-text { color: #64748b; font-size: 0.85rem; margin-bottom: 20px; }
+        .video-wrapper {
+            display: none;
+            width: 100%;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
             border: 1px solid rgba(148,163,184,.14);
-            font-size: 1rem;
-            padding-left: 2px;
-            transition: transform .22s ease, background .22s ease, border-color .22s ease;
         }
-
-        .server-card.featured .play-button {
-            background: #2563eb;
-            border-color: rgba(147,197,253,.45);
-            box-shadow: 0 8px 18px rgba(37,99,235,.28);
-        }
-
-        .server-card:hover .play-button {
-            transform: translateX(3px) scale(1.05);
-            background: #2563eb;
-            border-color: rgba(147,197,253,.45);
-        }
-
-        @media (max-width: 520px) {
-            body { padding: 14px; }
-            .card {
-                padding: 28px 15px 19px;
-                border-radius: 22px;
-            }
-            h1 { font-size: 1.85rem; }
-            .server-card {
-                min-height: 70px;
-                padding: 13px 14px 13px 17px;
-            }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>VIDEOS</h1>
-        
-        <div class="servers">
-            <!-- Server 1: يفتح صفحة redirect7.html (صفحة الفيديو والعداد) -->
-            <a href="redirect7.html" class="server-card featured">
-                <span class="server-title">Server 1</span>
-                <span class="play-button">▶</span>
-            </a>
 
-            <!-- Server 2, 3, 4: ضع روابط Direct Links لـ Adsterra هنا -->
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="server-card">
-                <span class="server-title">Server 2</span>
-                <span class="play-button">▶</span>
-            </a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="server-card">
-                <span class="server-title">Server 3</span>
-                <span class="play-button">▶</span>
-            </a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="server-card">
-                <span class="server-title">Server 4</span>
-                <span class="play-button">▶</span>
-            </a>
+    <div class="card">
+        <div id="waitScreen">
+            <h2>Preparing high speed stream...</h2>
+            <div class="timer-box" id="countdown">5</div>
+            <div class="timer-text">Please wait 5 seconds while we load your video</div>
+        </div>
+
+        <div class="video-wrapper" id="videoContainer">
+            <!-- ضع رابط فيديو VOE الجديد هنا داخل src -->
+            <iframe src="https://voe.sx/e/hcq9kygzgevf" allowfullscreen allowtransparency allow="autoplay" scrolling="no"></iframe>
         </div>
     </div>
+
+    <script>
+        let timeLeft = 5;
+        const countdownEl = document.getElementById('countdown');
+        const waitScreen = document.getElementById('waitScreen');
+        const videoContainer = document.getElementById('videoContainer');
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownEl.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                waitScreen.style.display = 'none';
+                videoContainer.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+
 </body>
 </html>
