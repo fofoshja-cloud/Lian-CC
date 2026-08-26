@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEOS - Select Server</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 50% -10%, rgba(37,99,235,.20), transparent 34%),
+                #070b12;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 470px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ad-box {
+            width: 100%;
+            min-height: 250px;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            padding: 30px 20px 22px;
+            border-radius: 26px;
+            background: linear-gradient(145deg, rgba(17,24,39,.98), rgba(10,15,25,.98));
+            border: 1px solid rgba(148,163,184,.12);
+            box-shadow: 0 30px 70px rgba(0,0,0,.55);
+            overflow: hidden;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto 20px;
+            font-size: clamp(2rem, 8vw, 2.6rem);
+            font-weight: 950;
+            letter-spacing: .10em;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #ffffff 0%, #93c5fd 42%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .servers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .server-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 72px;
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(145deg, #162033, #0e1625);
+            border: 1px solid rgba(148,163,184,.14);
+        }
+
+        .server-card.featured {
+            min-height: 82px;
+            border-color: rgba(96,165,250,.42);
+            background: linear-gradient(145deg, rgba(30,64,175,.36), rgba(15,23,42,.98));
+        }
+
+        .server-title { font-size: 1.05rem; font-weight: 800; color: #fff; }
+
+        .play-button {
+            width: 40px; height: 40px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 13px; color: #fff; background: rgba(255,255,255,.07);
+        }
+
+        .server-card.featured .play-button { background: #2563eb; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!-- 1. إعلان البنر المربع أعلى الصفحة (اختياري) -->
+        <div class="ad-box">
+            <!-- ضع كود البنر المربع 300x250 المأخوذ من Adsterra هنا -->
+        </div>
+
+        <div class="card">
+            <h1>VIDEOS</h1>
+            <div class="servers">
+
+                <!-- السيرفر الرئيسي يوجه إلى redirect.html -->
+                <a href="redirect12.html" class="server-card featured">
+                    <span class="server-title">Server 1</span>
+                    <span class="play-button">▶</span>
+                </a>
+
+                <a href="https://omg10.com/4/11585338" target="_blank" class="server-card">
+                    <span class="server-title">Server 2</span>
+                    <span class="play-button">▶</span>
+                </a>
+                <a href="https://omg10.com/4/11585338" target="_blank" class="server-card">
+                    <span class="server-title">Server 3</span>
+                    <span class="play-button">▶</span>
+                </a>
+                <a href="https://omg10.com/4/11585338" target="_blank" class="server-card">
+                    <span class="server-title">Server 4</span>
+                    <span class="play-button">▶</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. إعلان البنر المربع (300x250) أسفل قائمة السيرفرات -->
+        <div class="ad-box">
+            <!-- ضع كود البنر المربع 300x250 المأخوذ من Adsterra هنا -->
+        </div>
+
+    </div>
+
+    <!-- 3. كود Popunder (إعلان خفي) -->
+    <script type="text/javascript" src="//pl31039311.profitableratecpmnetwork.com/c9/a7/6e/c9a76ea34aa291906598af72ca32ce2d.js"></script>
+
+    <!-- 4. كود Social Bar (شريط تفاعلي) -->
+    <script type="text/javascript" src="//www.highrevenueformat.com/516e6fd8004aeb4a93b7f7ab6c199f78/invoke.js"></script>
+
+</body>
+</html>
