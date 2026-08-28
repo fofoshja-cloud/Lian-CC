@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- كود التحقق من الملكية -->
     <meta name="clckd" content="5fe2aabbd505152b1b1c1b742f26884f" />
+    
+    <!-- تسريع الاتصال بخوادم الإعلانات لحظياً -->
+    <link rel="preconnect" href="https://omg10.com" crossorigin>
+    <link rel="dns-prefetch" href="https://omg10.com">
+    
     <title>Select Server</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,11 +47,10 @@
             border-radius: 10px;
             font-weight: 600;
             font-size: 0.98rem;
-            transition: background 0.2s, border-color 0.2s, transform 0.15s;
+            transition: background 0.2s, border-color 0.2s;
         }
-        .btn:hover { background: #2563eb; border-color: #3b82f6; color: #fff; transform: translateY(-1px); }
+        .btn:hover { background: #2563eb; border-color: #3b82f6; color: #fff; }
         .btn-main { background: #238636; border-color: #2ea043; color: #fff; }
-        .btn-main:hover { background: #2ea043; border-color: #3fb950; }
         .ad-wrap {
             display: block;
             margin: 16px 0 4px;
@@ -58,7 +63,6 @@
             font-weight: 700;
             font-size: 0.9rem;
         }
-        .ad-wrap:hover { background: #374151; }
     </style>
 </head>
 <body>
@@ -67,13 +71,14 @@
         <p class="subtitle">Choose one of the servers below to continue</p>
 
         <div class="servers">
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 1 — Fast Stream</a>
+            <!-- فتح الروابط المباشرة في نفس النافذة بدلاً من تبويب جديد لتجنب المنع -->
+            <a href="https://omg10.com/4/11585338" class="btn">Server 1 — Fast Stream</a>
             <a href="redirect.html" class="btn btn-main">Server 2 — Main HD</a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 3 — Mobile</a>
-            <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="btn">Server 4 — Download</a>
+            <a href="https://omg10.com/4/11585338" class="btn">Server 3 — Mobile</a>
+            <a href="https://omg10.com/4/11585338" class="btn">Server 4 — Download</a>
         </div>
 
-        <a href="https://omg10.com/4/11585338" target="_blank" rel="noopener" class="ad-wrap">Sponsored — Open offer</a>
+        <a href="https://omg10.com/4/11585338" class="ad-wrap">Sponsored — Open offer</a>
     </div>
 </body>
 </html>
